@@ -1,9 +1,10 @@
+import os
 import telebot
 from telebot.types import InlineKeyboardMarkup, InlineKeyboardButton
 import time
 
-# التوكن الخاص بالبوت الذي تم توفيره
-TOKEN = "9024402018:AAHiyTr1oFsggBiwYNoAyTpUGpwBVNBIfGQ"
+# التوكن يتم قراءته من متغير البيئة BOT_TOKEN
+TOKEN = os.environ["BOT_TOKEN"]
 bot = telebot.TeleBot(TOKEN)
 
 # قاعدة بيانات مؤقتة لتخزين رصيد المستخدمين
